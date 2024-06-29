@@ -1,0 +1,22 @@
+Thread:-
+It's a part of process.
+It's a light weight process(It requires less number of resources).
+
+In java, we can create threats in two different ways 
+
+1. By extends Thread class:-
+-Thread class is predefined class it contains 'n' number of methods like start(),sleep(),join(),yeild(),run(),etc.
+
+programThreadMain
+
+-By default the name of main thread is main  and name of child thread is Thread-0,Thread-1,...Thread-n 
+
+Thread Priority:-
+-->by default main thread priority is 5 and child thread priority is also 5 only
+-->getPriority()- its a method,which returns the priority of thread 
+-->setPriority(int n)- it assign the specified int value as the priority for the thread,here i value must between 1-10 otherwise we will get error.
+-->1 means low priorityand 10 means high priority.
+
+Thread.Min_Priority -->1
+Thread.NORM_PRIORITY -->5
+Thread.MAX_PRIORITY -->10 

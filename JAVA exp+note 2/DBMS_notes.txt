@@ -1,0 +1,26 @@
+DIAGRAM made draw.io as DBMS.draw
+
+Steps for query optimization:-
+
+It involves three steps , namely query tree generation,plan generation and query plan code generation.
+
+Step1:-Query Tree generation
+
+A query tree is a tree data structure  representing a realational algebra expression. The tables of the query are represented as leaf nodes.The realational algebra operations are represented as the internal nodes. The root represents the query as a whole.
+
+During execution, an internal node is executed whenever its operand tables are available. The node is  then replaced by the result tables,this process continues for all internal nodes until the root node is executed and replaced by the result table.
+
+DEPARTMENT -->Dno,Dname,Location
+Employee --> EmpID,Ename,Salary,DeptNo,DateOfJoining
+
+Step2:- Query plan generation
+
+After the query tree is generated, a query plan is made.A query plan is an extended query tree that includes access paths for all operations in the  query tree. access paths specify how the realational operations in the tree should be performed. 
+
+for example a selection operation can have an access path that gives details about the use of B+ tree index for selection.
+
+Besides, a query plan also states how the intermidiate tables should be passed from one operator to the next , how temporary tables used and how operations should be pipelined/combined.
+
+Step3:- Code generation
+
+Its a final step in query optimization.it is the executable form  of the query.
